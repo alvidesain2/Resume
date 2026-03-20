@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Aleh - Instrumentation Technician</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        /* A4 Page Styling */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* Print Settings */
+        @media print {
+            body {
+                background: white;
+                margin: 0;
+                padding: 0;
+            }
+            .page {
+                width: 100%;
+                min-height: 100vh;
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+            /* Hide UI elements during print if necessary */
+            .no-print {
+                display: none !important;
+            }
+        }
+        
+        .section-title {
+            border-bottom: 2px solid #1e3a8a; /* Tailwind blue-900 */
+            padding-bottom: 0.25rem;
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Tombol Print (Sembunyi saat diprint) -->
+    <div class="max-w-[210mm] mx-auto pt-4 no-print flex justify-between items-center px-4 md:px-0">
+        <p class="text-sm text-gray-600"><i class="fas fa-info-circle mr-1"></i>Tekan <strong>Ctrl + P</strong> (Windows) atau <strong>Cmd + P</strong> (Mac) untuk menyimpan sebagai PDF. Atur margin ke "None" atau "Default".</p>
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow transition-colors duration-200">
+            <i class="fas fa-print mr-2"></i> Print to PDF
+        </button>
+    </div>
+
+    <!-- Halaman CV -->
+    <div class="page flex flex-col md:flex-row overflow-hidden">
+        
+        <!-- Sidebar Kiri (Warna Gelap) -->
+        <div class="w-full md:w-1/3 bg-slate-800 text-white p-8 flex flex-col">
+            
+            <!-- Foto Profil -->
+            <div class="flex justify-center mb-6">
+                <!-- GANTI 'src' DI BAWAH INI DENGAN NAMA FILE FOTO ANDA JIKA DI-HOST LOKAL (misal: src="13766.jpg") -->
+                <img src="https://drive.google.com/uc?export=view&id=176fKAwpQTMybi7iNPRdDf4R4tnojCYab" 
+                     alt="Aleh Photo" 
+                     class="w-40 h-40 rounded-full object-cover border-4 border-slate-600 shadow-lg">
+            </div>
+
+            <!-- Nama & Jabatan (Mobile view only) -->
+            <div class="text-center md:hidden mb-6">
+                <h1 class="text-3xl font-bold uppercase tracking-wider">Aleh</h1>
+                <h2 class="text-blue-300 font-medium text-lg mt-1">Instrumentation Technician</h2>
+            </div>
+
+            <!-- Kontak -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold uppercase tracking-wider mb-4 border-b border-slate-600 pb-2">Contact</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start">
+                        <i class="fas fa-phone mt-1 mr-3 text-blue-400 w-4 text-center"></i>
+                        <span>+62 895-1078-2355</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope mt-1 mr-3 text-blue-400 w-4 text-center"></i>
+                        <span class="break-all">alehsukardi@live.com</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400 w-4 text-center"></i>
+                        <span>Kp. Cimahi RT.007/RW.03<br>Ds. Wanakerta, Bungursari<br>Purwakarta, West Java<br>Indonesia</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Core Competencies -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold uppercase tracking-wider mb-4 border-b border-slate-600 pb-2">Skills</h3>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li><span class="text-white font-medium">Control Systems:</span> DCS, PLC, FDB</li>
+                    <li><span class="text-white font-medium">Documentation:</span> PFD, P&ID, Loop & Wiring Diagrams</li>
+                    <li><span class="text-white font-medium">Instrumentation:</span> AC Drives, Transmitters, Control Valves, Motors</li>
+                    <li><span class="text-white font-medium">Calibration:</span> HART, Multimeter, Field Calibrator</li>
+                    <li><span class="text-white font-medium">Maintenance:</span> ERP/MMS, Troubleshooting</li>
+                    <li><span class="text-white font-medium">IT & Web:</span> Hardware, Network, HTML, PHP, SQL</li>
+                </ul>
+            </div>
+
+            <!-- Pendidikan -->
+            <div class="mb-8">
+                <h3 class="text-lg font-bold uppercase tracking-wider mb-4 border-b border-slate-600 pb-2">Education</h3>
+                <div class="text-sm">
+                    <h4 class="font-bold text-white">SMK Texmaco Karawang</h4>
+                    <p class="text-slate-300 mt-1">Industrial Electronics</p>
+                    <p class="text-blue-300 text-xs mt-1"><i class="far fa-calendar-alt mr-1"></i> Graduated 2001</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Konten Utama Kanan (Warna Terang) -->
+        <div class="w-full md:w-2/3 p-8 bg-white">
+            
+            <!-- Nama & Jabatan (Desktop view) -->
+            <div class="hidden md:block mb-8">
+                <h1 class="text-5xl font-bold uppercase tracking-widest text-slate-800">Aleh</h1>
+                <h2 class="text-2xl text-blue-700 font-medium mt-2">Instrumentation Technician</h2>
+            </div>
+
+            <!-- Professional Summary -->
+            <div class="mb-8">
+                <h3 class="text-xl font-bold uppercase section-title">Professional Summary</h3>
+                <p class="text-sm text-gray-700 leading-relaxed text-justify">
+                    Detail-oriented and highly skilled Instrumentation Technician with over 14 years of hands-on experience in industrial control systems. Proven expertise in diagnosing, maintaining, and calibrating a wide range of field instruments and control loops. Adept at interpreting complex engineering diagrams and working with DCS and PLC systems to ensure optimal operational efficiency. Strongly committed to Occupational Health and Safety (HSE) standards, with practical field coordination experience.
+                </p>
+            </div>
+
+            <!-- Pengalaman Kerja -->
+            <div class="mb-8">
+                <h3 class="text-xl font-bold uppercase section-title">Professional Experience</h3>
+                
+                <!-- Pengalaman 1 -->
+                <div class="mb-5">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <h4 class="text-md font-bold text-slate-800">PT. Asia Pacifik Fibers Tbk</h4>
+                        <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2 py-1 rounded">Jul 2001 – Sep 2015</span>
+                    </div>
+                    <h5 class="text-sm font-semibold text-gray-600 italic mb-2">Instrument Technician</h5>
+                    <ul class="list-disc list-outside ml-4 text-sm text-gray-700 space-y-1">
+                        <li>Conducted routine inspections, repairs, and preventative maintenance for all instrumentation equipment, including AC drives, pneumatic & conveyor systems, weighing scales, and DCS/Computer controls.</li>
+                        <li>Analyzed and troubleshot instrument failures rapidly to restore control system functionality and minimize production downtime.</li>
+                        <li>Executed field instrument modifications and performed precise equipment calibrations.</li>
+                        <li>Managed maintenance documentation and generated accurate reports using the ERP system in accordance with standard operating procedures (SOP).</li>
+                    </ul>
+                </div>
+
+                <!-- Pengalaman 2 -->
+                <div class="mb-5">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <h4 class="text-md font-bold text-slate-800">Edge Connect / BCEI (JKT02 GTN Project)</h4>
+                        <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2 py-1 rounded">Dec 2024 – Mar 2025</span>
+                    </div>
+                    <h5 class="text-sm font-semibold text-gray-600 italic mb-2">Field Worker - PT. HVM Cakra Securindo</h5>
+                    <ul class="list-disc list-outside ml-4 text-sm text-gray-700 space-y-1">
+                        <li>Installed main bollards, intermediate bollards, tapperposts, and ram panels.</li>
+                        <li>Performed critical hot work, material handling, and heavy lifting operations safely.</li>
+                        <li>Coordinated directly with the HSE department to secure Hot Work Permits and collaborated with the Rigging team to ensure site safety.</li>
+                    </ul>
+                </div>
+
+                <!-- Pengalaman 3 -->
+                <div class="mb-5">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <h4 class="text-md font-bold text-slate-800">Mulia Elektrik Cikampek</h4>
+                        <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2 py-1 rounded">Dec 2018 – Jul 2020</span>
+                    </div>
+                    <h5 class="text-sm font-semibold text-gray-600 italic mb-2">Warehouse Assistant</h5>
+                    <ul class="list-disc list-outside ml-4 text-sm text-gray-700 space-y-1">
+                        <li>Prepared electrical equipment orders for dispatch according to client requests.</li>
+                        <li>Controlled inventory stock (inbound/outbound, returns) and recorded data using inventory management software.</li>
+                    </ul>
+                </div>
+
+                <!-- Pengalaman 4 -->
+                <div class="mb-2">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <h4 class="text-md font-bold text-slate-800">CV. Alam Hijau</h4>
+                        <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2 py-1 rounded">Nov 2015 – Oct 2018</span>
+                    </div>
+                    <h5 class="text-sm font-semibold text-gray-600 italic mb-2">Web Administrator</h5>
+                    <ul class="list-disc list-outside ml-4 text-sm text-gray-700 space-y-1">
+                        <li>Monitored website development, analyzed server issues, and implemented corrective actions.</li>
+                        <li>Managed database backups, data recovery, and site security protocols.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Training & Certifications -->
+            <div>
+                <h3 class="text-xl font-bold uppercase section-title">Training & Certifications</h3>
+                <ul class="list-disc list-outside ml-4 text-sm text-gray-700 space-y-1">
+                    <li><strong class="text-slate-800">Systems & Controls:</strong> DCS ABB Mod300 Unix & ABB 800xA, PLC Siemens Simatic Step 5 & 7.</li>
+                    <li><strong class="text-slate-800">Instrumentation:</strong> Basic Instrumentation, Instrument Elements (Pt-100, Rosemount, Micromotion, Yokogawa).</li>
+                    <li><strong class="text-slate-800">Drives:</strong> AC Drives Frequency Inverter (Siemens MM440, Danfoss VLT series).</li>
+                    <li><strong class="text-slate-800">HSE & Safety:</strong> HSE Induction, Material Handling & Lifting, Hot Work, Fire Watcher, Working at Heights, Fire Fighting.</li>
+                    <li><strong class="text-slate-800">Management:</strong> ISO 9001 Quality Management System, Computerized Maintenance Management System (MMS) via ERP.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
